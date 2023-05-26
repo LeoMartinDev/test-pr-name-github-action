@@ -1,6 +1,6 @@
 on:
   pull_request:
-   types: [opened, synchronize]
+   types: [opened, editer]
 
 jobs:
   ensure_pr_has_title_is_valid:
