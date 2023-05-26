@@ -1,0 +1,15 @@
+on:
+  push:
+  pull_request:
+   types: [opened, synchronize]
+
+jobs:
+  ensure_pr_has_title_is_valid:
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: Pull Request title rules
+      # You may pin to the exact commit or the version.
+      # uses: deepakputhraya/action-pr-title@3864bebc79c5f829d25dd42d3c6579d040b0ef16
+      uses: deepakputhraya/action-pr-title@v1.0.2
+      with:
+        regex: ^(feat|fix|test|refactor|build|docs|tech)(\(.*\))?:\s
